@@ -1,0 +1,2407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>$MBAT – Mexican Batman Token | Protector of the Trenches</title>
+    <meta name="description" content="$MBAT is a community-driven meme token inspired by the viral Mexican Batman phenomenon. Join the Bat Revolution and protect the trenches." />
+    <meta name="keywords" content="MBAT, Mexican Batman, meme token, crypto, GameFi, community token, bat revolution" />
+    <link rel="canonical" href="https://mexicanbatman.io" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="$MBAT – Mexican Batman Token" />
+    <meta property="og:description" content="Protector of the Trenches. A community-driven meme token inspired by the viral Mexican Batman phenomenon." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mexicanbatman.io" />
+    <meta property="og:image" content="https://res.cloudinary.com/drdrwbdkp/image/upload/v1783027664/IMG_20260702_202541_851_utc0gq.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="$MBAT – Mexican Batman Token" />
+    <meta name="twitter:description" content="Protector of the Trenches. Join the Bat Revolution." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/drdrwbdkp/image/upload/v1783027664/IMG_20260702_202541_851_utc0gq.jpg" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0B0B0D" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 100%;
+        }
+
+        body {
+            background: #0B0B0D;
+            color: #F7F4ED;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b8962e;
+        }
+
+        /* ===== PARTICLES CANVAS ===== */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ===== UTILITY ===== */
+        .gold-text {
+            color: #D4AF37;
+        }
+
+        .section-label {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #D4AF37;
+            margin-bottom: 12px;
+            display: inline-block;
+            border-bottom: 2px solid #D4AF37;
+            padding-bottom: 6px;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 5vw, 3.2rem);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            color: rgba(247, 244, 237, 0.7);
+            max-width: 640px;
+            margin: 0 auto 32px;
+            font-weight: 300;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary,
+        .btn-secondary,
+        .btn-whitepaper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: clamp(12px, 2vw, 16px) clamp(24px, 3vw, 40px);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            border: none;
+            min-height: 52px;
+            word-break: break-word;
+        }
+
+        .btn-primary {
+            color: #0B0B0D;
+            background: linear-gradient(135deg, #D4AF37, #f5d77b, #D4AF37);
+            background-size: 200% 200%;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.03) translateY(-2px);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.45);
+            background-position: 100% 100%;
+        }
+
+        .btn-secondary {
+            color: #D4AF37;
+            background: transparent;
+            border: 2px solid #D4AF37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
+        }
+
+        .btn-secondary:hover {
+            transform: scale(1.03) translateY(-2px);
+            background: rgba(212, 175, 55, 0.08);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
+            border-color: #f5d77b;
+            color: #f5d77b;
+        }
+
+        .btn-whitepaper {
+            color: #0B0B0D;
+            background: linear-gradient(135deg, #D4AF37, #f5d77b);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-whitepaper:hover {
+            transform: scale(1.03) translateY(-2px);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 24px;
+            width: 100%;
+        }
+
+        .btn-group .btn-primary,
+        .btn-group .btn-secondary,
+        .btn-group .btn-whitepaper {
+            flex: 1 1 auto;
+            min-width: 160px;
+            max-width: 280px;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 12px 0;
+            background: rgba(11, 11, 13, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .site-header.scrolled {
+            background: rgba(11, 11, 13, 0.96);
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: #D4AF37;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-size: inherit;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+            font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+            color: rgba(247, 244, 237, 0.7);
+            transition: color 0.3s ease;
+            letter-spacing: 0.5px;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #F7F4ED;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 6px 16px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #D4AF37, #f5d77b);
+            color: #0B0B0D !important;
+            font-weight: 700 !important;
+            font-size: clamp(0.6rem, 1vw, 0.75rem) !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            color: #0B0B0D !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: #F7F4ED;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0 60px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1200px;
+            height: 1200px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero-logo-frame {
+            width: clamp(80px, 15vw, 120px);
+            height: clamp(80px, 15vw, 120px);
+            border-radius: 50%;
+            border: 3px solid #D4AF37;
+            padding: 6px;
+            background: #0B0B0D;
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.15);
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .hero-logo-frame:hover {
+            box-shadow: 0 0 80px rgba(212, 175, 55, 0.25);
+        }
+
+        .hero-logo-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #D4AF37;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 4px 14px;
+            border-radius: 30px;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: clamp(2.2rem, 7vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .hero-title .gold-text {
+            display: block;
+        }
+
+        .hero-desc {
+            font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+            color: rgba(247, 244, 237, 0.75);
+            max-width: 500px;
+            margin-bottom: 8px;
+            font-weight: 300;
+            word-break: break-word;
+        }
+
+        .hero-desc strong {
+            color: #F7F4ED;
+            font-weight: 600;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        section {
+            position: relative;
+            z-index: 1;
+            padding: clamp(50px, 8vh, 80px) 0;
+        }
+
+        section:nth-child(even) {
+            background: rgba(11, 11, 13, 0.6);
+        }
+
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .about-text p {
+            color: rgba(247, 244, 237, 0.75);
+            margin-bottom: 16px;
+            font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .about-text p strong {
+            color: #F7F4ED;
+            font-weight: 600;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .value-tag {
+            background: rgba(107, 74, 30, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 14px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 500;
+            font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+            color: #F7F4ED;
+            transition: all 0.3s ease;
+        }
+
+        .value-tag:hover {
+            border-color: rgba(212, 175, 55, 0.25);
+            background: rgba(212, 175, 55, 0.06);
+            transform: scale(1.02);
+        }
+
+        .value-tag .emoji {
+            font-size: 1.2rem;
+        }
+
+        .mission-block {
+            background: rgba(107, 74, 30, 0.06);
+            border-left: 4px solid #D4AF37;
+            border-radius: 0 20px 20px 0;
+            padding: clamp(20px, 3vw, 32px) clamp(24px, 4vw, 36px);
+            margin-top: 20px;
+        }
+
+        .mission-block p {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            font-weight: 300;
+            color: rgba(247, 244, 237, 0.8);
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* ===== ROADMAP ===== */
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .roadmap-card {
+            padding: clamp(20px, 3vw, 28px) clamp(16px, 2.5vw, 24px);
+            border-radius: 20px;
+            background: rgba(11, 11, 13, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .roadmap-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #D4AF37, #f5d77b, #D4AF37);
+            opacity: 0.4;
+        }
+
+        .roadmap-card:hover {
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .roadmap-card .phase {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: clamp(0.65rem, 1vw, 0.75rem);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #D4AF37;
+            margin-bottom: 4px;
+        }
+
+        .roadmap-card .phase-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            margin-bottom: 10px;
+        }
+
+        .roadmap-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .roadmap-card ul li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+            color: rgba(247, 244, 237, 0.7);
+            font-size: clamp(0.85rem, 1vw, 0.92rem);
+            font-weight: 300;
+        }
+
+        .roadmap-card ul li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-size: 0.6rem;
+            top: 6px;
+        }
+
+        /* ===== TOKENOMICS ===== */
+        .tokenomics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .tokenomics-item {
+            text-align: center;
+            padding: clamp(16px, 2vw, 24px) clamp(12px, 1.5vw, 16px);
+            background: rgba(11, 11, 13, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .tokenomics-item:hover {
+            border-color: rgba(212, 175, 55, 0.2);
+            background: rgba(107, 74, 30, 0.06);
+        }
+
+        .tokenomics-item .value {
+            font-family: 'Space Grotesk', monospace;
+            font-weight: 700;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            color: #D4AF37;
+            display: block;
+        }
+
+        .tokenomics-item .desc {
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
+            color: rgba(247, 244, 237, 0.6);
+            margin-top: 4px;
+        }
+
+        .tokenomics-note {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(247, 244, 237, 0.5);
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            font-style: italic;
+        }
+
+        /* ===== CONTRACT & CHART ===== */
+        .contract-box {
+            background: rgba(11, 11, 13, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            border-radius: 20px;
+            padding: clamp(16px, 2vw, 24px) clamp(16px, 3vw, 32px);
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            margin-top: 12px;
+            width: 100%;
+        }
+
+        .contract-box .address {
+            font-family: 'Space Grotesk', monospace;
+            font-weight: 500;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            color: rgba(247, 244, 237, 0.8);
+            letter-spacing: 0.5px;
+            word-break: break-all;
+        }
+
+        .contract-box .badge {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: clamp(0.6rem, 1vw, 0.7rem);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #D4AF37;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .chart-placeholder {
+            background: rgba(11, 11, 13, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 24px;
+            padding: clamp(40px, 5vw, 60px) clamp(20px, 3vw, 40px);
+            text-align: center;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            margin-top: 16px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .chart-placeholder .big-icon {
+            font-size: clamp(2.5rem, 5vw, 3.6rem);
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        .chart-placeholder p {
+            color: rgba(247, 244, 237, 0.4);
+            font-size: clamp(0.85rem, 1vw, 0.95rem);
+            font-weight: 300;
+        }
+
+        .pulse-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #D4AF37;
+            border-radius: 50%;
+            animation: pulseDot 2s ease-in-out infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes pulseDot {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(0.8);
+            }
+        }
+
+        /* ===== MEME GENERATOR ===== */
+        .memegen-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 20px;
+            align-items: start;
+        }
+
+        .memegen-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .memegen-card {
+            background: rgba(11, 11, 13, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            border-radius: 20px;
+            padding: clamp(18px, 2.5vw, 24px);
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .memegen-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #D4AF37, #f5d77b, #D4AF37);
+            opacity: 0.35;
+        }
+
+        .memegen-card:hover {
+            border-color: rgba(212, 175, 55, 0.25);
+        }
+
+        .memegen-card-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .memegen-card-icon {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+        }
+
+        .memegen-card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: clamp(0.75rem, 1vw, 0.85rem);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #D4AF37;
+        }
+
+        .memegen-upload-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 16px;
+            border-radius: 14px;
+            border: 2px dashed rgba(212, 175, 55, 0.3);
+            background: rgba(212, 175, 55, 0.04);
+            color: rgba(247, 244, 237, 0.7);
+            font-size: clamp(0.85rem, 1vw, 0.95rem);
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .memegen-upload-btn:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+            background: rgba(212, 175, 55, 0.08);
+            color: #F7F4ED;
+        }
+
+        .memegen-thumb-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 12px;
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        .memegen-thumb {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .memegen-clear-btn {
+            margin-left: auto;
+            background: none;
+            border: none;
+            color: rgba(247, 244, 237, 0.5);
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.78rem;
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .memegen-clear-btn:hover {
+            color: #e0665a;
+            background: rgba(224, 102, 90, 0.08);
+        }
+
+        .memegen-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 18px 0;
+            color: rgba(247, 244, 237, 0.35);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .memegen-divider::before,
+        .memegen-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .memegen-divider span {
+            padding: 0 12px;
+        }
+
+        .memegen-textarea {
+            width: 100%;
+            min-height: 110px;
+            resize: vertical;
+            background: rgba(11, 11, 13, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 14px;
+            padding: 14px 16px;
+            color: #F7F4ED;
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(0.85rem, 1vw, 0.95rem);
+            font-weight: 300;
+            transition: border-color 0.3s ease;
+        }
+
+        .memegen-textarea:focus {
+            outline: none;
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .memegen-textarea::placeholder {
+            color: rgba(247, 244, 237, 0.3);
+        }
+
+        .memegen-status {
+            margin-top: 14px;
+            font-size: clamp(0.75rem, 1vw, 0.85rem);
+            color: rgba(212, 175, 55, 0.85);
+            font-weight: 400;
+            min-height: 18px;
+            text-align: center;
+        }
+
+        .memegen-status.error {
+            color: #e0665a;
+        }
+
+        .memegen-result-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .memegen-canvas-frame {
+            background: rgba(11, 11, 13, 0.65);
+            border: 2px dashed rgba(212, 175, 55, 0.18);
+            border-radius: 14px;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .memegen-placeholder-text {
+            color: rgba(247, 244, 237, 0.3);
+            font-size: clamp(0.85rem, 1vw, 0.95rem);
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .memegen-canvas-frame img {
+            max-width: 100%;
+            max-height: 460px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .memegen-download {
+            text-decoration: none;
+        }
+
+        @media (max-width: 860px) {
+            .memegen-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== SOCIAL MEDIA ===== */
+        .social-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: clamp(12px, 1.5vw, 16px) clamp(24px, 3vw, 36px);
+            border-radius: 16px;
+            background: rgba(11, 11, 13, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.06);
+            color: #F7F4ED;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            flex: 1 1 auto;
+            justify-content: center;
+            max-width: 280px;
+        }
+
+        .social-link:hover {
+            border-color: rgba(212, 175, 55, 0.25);
+            background: rgba(212, 175, 55, 0.04);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-link svg {
+            width: clamp(24px, 3vw, 28px);
+            height: clamp(24px, 3vw, 28px);
+            fill: #D4AF37;
+            transition: fill 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .social-link:hover svg {
+            fill: #f5d77b;
+        }
+
+        /* ===== OUR PROMISE ===== */
+        .promise-card {
+            background: rgba(11, 11, 13, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 24px;
+            padding: clamp(32px, 5vw, 48px) clamp(20px, 4vw, 40px);
+            text-align: center;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+            max-width: 820px;
+            margin: 0 auto;
+            transition: all 0.4s ease;
+        }
+
+        .promise-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 175, 55, 0.04);
+        }
+
+        .promise-card p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(247, 244, 237, 0.85);
+            font-style: italic;
+        }
+
+        .promise-card p strong {
+            color: #D4AF37;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .promise-card .signature {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            color: #D4AF37;
+            margin-top: 16px;
+            font-style: normal;
+            letter-spacing: 1px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            padding: clamp(16px, 2vw, 20px) clamp(16px, 2vw, 24px);
+            border-radius: 16px;
+            background: rgba(11, 11, 13, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(212, 175, 55, 0.12);
+        }
+
+        .faq-item .q {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+            color: #D4AF37;
+            margin-bottom: 6px;
+        }
+
+        .faq-item .a {
+            color: rgba(247, 244, 237, 0.7);
+            font-size: clamp(0.85rem, 1vw, 0.92rem);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* ===== WHITEPAPER MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal-content {
+            background: #0B0B0D;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 28px;
+            max-width: 820px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: clamp(32px, 5vw, 48px) clamp(16px, 4vw, 48px) clamp(24px, 4vw, 40px);
+            position: relative;
+            box-shadow: 0 0 80px rgba(212, 175, 55, 0.06);
+            scrollbar-width: thin;
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        .modal-content::-webkit-scrollbar-track {
+            background: #0B0B0D;
+        }
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+
+        .modal-close {
+            position: sticky;
+            top: 0;
+            float: right;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+            width: clamp(38px, 5vw, 44px);
+            height: clamp(38px, 5vw, 44px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(1.2rem, 2vw, 1.4rem);
+            color: #D4AF37;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            margin-bottom: 8px;
+        }
+
+        .modal-close:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: rotate(90deg);
+        }
+
+        /* --- WHITEPAPER CONTENT ONLY --- */
+        .modal-content .wp-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #D4AF37;
+            margin-bottom: 4px;
+            clear: both;
+        }
+
+        .modal-content .wp-subtitle {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 400;
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+            color: rgba(247, 244, 237, 0.5);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+            padding-bottom: 16px;
+        }
+
+        .modal-content .wp-section {
+            margin-bottom: 24px;
+        }
+
+        .modal-content .wp-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            color: #D4AF37;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-content .wp-section p {
+            color: rgba(247, 244, 237, 0.75);
+            font-size: clamp(0.9rem, 1.2vw, 0.98rem);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .modal-content .wp-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .modal-content .wp-section ul li {
+            background: rgba(107, 74, 30, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.06);
+            border-radius: 30px;
+            padding: 4px 14px;
+            font-size: clamp(0.75rem, 1vw, 0.85rem);
+            color: rgba(247, 244, 237, 0.7);
+            font-weight: 400;
+        }
+
+        .modal-content .wp-section .promise-box {
+            background: rgba(212, 175, 55, 0.04);
+            border-left: 3px solid #D4AF37;
+            padding: clamp(16px, 2vw, 20px) clamp(16px, 3vw, 24px);
+            border-radius: 0 12px 12px 0;
+            margin-top: 8px;
+            font-style: italic;
+            color: rgba(247, 244, 237, 0.8);
+            font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+            line-height: 1.8;
+        }
+
+        .modal-content .wp-section .promise-box strong {
+            color: #D4AF37;
+            font-weight: 600;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: #0B0B0D;
+            border-top: 1px solid rgba(212, 175, 55, 0.12);
+            padding: clamp(40px, 6vw, 56px) 0 clamp(24px, 3vw, 32px);
+            position: relative;
+            z-index: 1;
+            margin-top: auto;
+            box-shadow: 0 -4px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-brand .logo {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #D4AF37;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+        }
+
+        .footer-brand p {
+            color: rgba(247, 244, 237, 0.5);
+            font-size: clamp(0.85rem, 1vw, 0.95rem);
+            font-weight: 300;
+            max-width: 320px;
+            line-height: 1.8;
+        }
+
+        .footer-col h5 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            color: #D4AF37;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(247, 244, 237, 0.5);
+            font-size: clamp(0.85rem, 1vw, 0.92rem);
+            font-weight: 300;
+            padding: 4px 0;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: 'Manrope', sans-serif;
+            text-align: left;
+        }
+
+        .footer-col a:hover {
+            color: #F7F4ED;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.06);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p {
+            color: rgba(247, 244, 237, 0.25);
+            font-size: clamp(0.7rem, 0.9vw, 0.8rem);
+            font-weight: 300;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-socials a {
+            color: rgba(247, 244, 237, 0.25);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-socials a:hover {
+            color: #D4AF37;
+            transform: translateY(-3px);
+        }
+
+        .footer-socials svg {
+            width: clamp(20px, 2.5vw, 24px);
+            height: clamp(20px, 2.5vw, 24px);
+            fill: currentColor;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                align-items: center;
+            }
+
+            .hero-desc {
+                max-width: 100%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 28px;
+            }
+
+            .btn-group .btn-primary,
+            .btn-group .btn-secondary,
+            .btn-group .btn-whitepaper {
+                min-width: 140px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(11, 11, 13, 0.98);
+                padding: 24px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+                gap: 16px;
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: clamp(2rem, 8vw, 3.2rem);
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .contract-box {
+                flex-direction: column;
+                gap: 12px;
+                padding: 16px 20px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-group .btn-primary,
+            .btn-group .btn-secondary,
+            .btn-group .btn-whitepaper {
+                min-width: 100%;
+                max-width: 320px;
+            }
+
+            .roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tokenomics-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 20px 16px;
+                border-radius: 20px;
+            }
+
+            .modal-content .wp-title {
+                font-size: 1.6rem;
+            }
+
+            .modal-close {
+                width: 34px;
+                height: 34px;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: clamp(1.6rem, 6vw, 2.4rem);
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .nav-links a {
+                font-size: 0.95rem;
+                white-space: normal;
+            }
+
+            .hero-logo-frame {
+                width: 80px;
+                height: 80px;
+            }
+
+            .social-link {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .site-footer {
+                padding: 32px 0 20px;
+            }
+
+            .footer-brand p {
+                max-width: 100%;
+            }
+
+            .promise-card {
+                padding: 24px 16px;
+            }
+
+            .promise-card p {
+                font-size: 1rem;
+            }
+
+            .about-grid {
+                gap: 24px;
+            }
+
+            .mission-block {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tokenomics-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .hero-logo-frame {
+                width: 70px;
+                height: 70px;
+            }
+
+            .social-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-link {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .footer-grid {
+                gap: 20px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .promise-card {
+                padding: 20px 16px;
+            }
+
+            .promise-card p {
+                font-size: 0.95rem;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .btn-primary,
+            .btn-secondary,
+            .btn-whitepaper {
+                font-size: 0.7rem;
+                padding: 12px 16px;
+                min-height: 44px;
+            }
+
+            .contract-box .address {
+                font-size: 0.8rem;
+            }
+
+            .modal-content .wp-title {
+                font-size: 1.4rem;
+            }
+
+            .modal-content .wp-section h3 {
+                font-size: 0.95rem;
+            }
+
+            .modal-content .wp-section p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* ===== PATTERN OVERLAY ===== */
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.04;
+            background-image:
+                repeating-linear-gradient(45deg, #D4AF37 0px, #D4AF37 1px, transparent 1px, transparent 20px),
+                repeating-linear-gradient(-45deg, #D4AF37 0px, #D4AF37 1px, transparent 1px, transparent 20px);
+            background-size: 40px 40px;
+        }
+
+        /* ===== FADE SECTIONS ===== */
+        .fade-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== SCROLL MARGIN ===== */
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== PARTICLES CANVAS ===== -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- ===== PATTERN OVERLAY ===== -->
+    <div class="pattern-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,#D4AF37 0px,#D4AF37 1px,transparent 1px,transparent 24px),repeating-linear-gradient(-45deg,#D4AF37 0px,#D4AF37 1px,transparent 1px,transparent 24px);background-size:48px 48px;" aria-hidden="true"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="header" role="banner">
+        <div class="container header-inner">
+            <a href="#hero" class="logo" aria-label="$MBAT Home">
+                <span class="logo-text">$MBAT</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks" role="navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#chart">Contract</a></li>
+                <li><a href="#meme-generator">Meme Lab</a></li>
+                <li><a href="#socials">Socials</a></li>
+                <li><a href="#promise">Promise</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#chart" class="nav-cta">Chart</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-label="Hero banner">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-logo-frame">
+                    <img
+                        src="https://res.cloudinary.com/drdrwbdkp/image/upload/v1783027664/IMG_20260702_202541_851_utc0gq.jpg"
+                        alt="$MBAT Logo - Mexican Batman Token"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='🦇';"
+                    />
+                </div>
+                <span class="hero-badge">🦇 Protector of the Trenches</span>
+                <h1 class="hero-title">
+                    Join the<br />
+                    <span class="gold-text">Bat Revolution</span>
+                </h1>
+                <p class="hero-desc">
+                    They said he wasn't real. The internet made him a legend.<br />
+                    From <strong>Jalisco</strong> to every timeline, the Bat has landed.
+                </p>
+                <div class="btn-group">
+                    <a href="#chart" class="btn-primary">Live Chart</a>
+                    <button class="btn-whitepaper" id="openWhitepaperBtn" aria-label="Open Whitepaper">
+                        📄 Whitepaper
+                    </button>
+                    <a href="#socials" class="btn-secondary">Community</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="fade-section" aria-label="About $MBAT">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">About $MBAT</span>
+                <h2 class="section-title">The Legend of the <span class="gold-text">Mexican Bat</span></h2>
+                <p class="section-subtitle">
+                    Armed with a luchador mask, a poncho, and an unstoppable commitment to the community.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3 style="font-family:'Orbitron',sans-serif;font-weight:600;font-size:clamp(1rem,2vw,1.2rem);color:#D4AF37;margin-bottom:10px;">📖 Narrative</h3>
+                    <p>
+                        They said he wasn't real. The internet made him a legend.<br />
+                        From <strong>Jalisco</strong> to every timeline, the Bat has landed. Now <strong>$MBAT</strong> is taking flight.
+                    </p>
+                    <p>
+                        No utility talk. No fake promises. No rugs — just a community-first setup.<br />
+                        Pure meme energy, a stacked community, and one mission: <strong>make history</strong>.
+                    </p>
+                    <p>
+                        The Bat Signal is on. The streets are watching. The community decides how far this goes.
+                    </p>
+
+                    <div style="margin-top:20px;">
+                        <h3 style="font-family:'Orbitron',sans-serif;font-weight:600;font-size:clamp(1rem,2vw,1.2rem);color:#D4AF37;margin-bottom:10px;">🛡️ Overview</h3>
+                        <p>
+                            <strong>$MBAT</strong> is a community-driven meme token inspired by the viral <em>“Mexican Batman”</em> phenomenon.
+                            Armed with a luchador mask, a poncho, and an unstoppable commitment to the community,
+                            <strong>MBAT</strong> stands against rug pulls, scams, and fear in the trenches.
+                        </p>
+                        <p style="font-style:italic;color:rgba(247,244,237,0.6);">
+                            We're not here to promise the moon—we're here to build a legendary community.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mission-block">
+                        <h3 style="font-family:'Orbitron',sans-serif;font-weight:600;font-size:clamp(1rem,2vw,1.2rem);color:#D4AF37;margin-bottom:8px;">🎯 Mission</h3>
+                        <p>
+                            Build a strong, transparent community where holders support one another,
+                            create unforgettable memes, and grow the <strong>$MBAT</strong> brand together.
+                        </p>
+                    </div>
+
+                    <div style="margin-top:24px;">
+                        <h4 style="font-family:'Orbitron',sans-serif;font-weight:600;font-size:clamp(0.9rem,1.5vw,1rem);color:#F7F4ED;margin-bottom:12px;">Core Values</h4>
+                        <div class="values-grid">
+                            <div class="value-tag"><span class="emoji">🦇</span> Community First</div>
+                            <div class="value-tag"><span class="emoji">🛡️</span> Protect the Trenches</div>
+                            <div class="value-tag"><span class="emoji">😂</span> Meme Culture</div>
+                            <div class="value-tag"><span class="emoji">🤝</span> Transparency</div>
+                            <div class="value-tag"><span class="emoji">🚀</span> Long-Term Growth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ROADMAP ===== -->
+    <section id="roadmap" class="fade-section" aria-label="Roadmap">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Roadmap</span>
+                <h2 class="section-title">The <span class="gold-text">Bat's</span> Flight Path</h2>
+                <p class="section-subtitle">From launch to legendary — together we rise.</p>
+            </div>
+
+            <div class="roadmap-grid">
+                <div class="roadmap-card">
+                    <div class="phase">Phase 1</div>
+                    <div class="phase-title">🦇 Launch</div>
+                    <ul>
+                        <li>Website &amp; socials live</li>
+                        <li>Community building</li>
+                        <li>Initial marketing push</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-card">
+                    <div class="phase">Phase 2</div>
+                    <div class="phase-title">📈 Growth</div>
+                    <ul>
+                        <li>Marketing campaigns</li>
+                        <li>Meme contests</li>
+                        <li>Partnerships</li>
+                        <li>Exchange listings</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-card">
+                    <div class="phase">Phase 3</div>
+                    <div class="phase-title">🌎 Ecosystem</div>
+                    <ul>
+                        <li>Community governance</li>
+                        <li>Merchandise</li>
+                        <li>Ecosystem expansion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOKENOMICS ===== -->
+    <section id="tokenomics" class="fade-section" style="background:rgba(11,11,13,0.4);" aria-label="Tokenomics">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Tokenomics</span>
+                <h2 class="section-title">The <span class="gold-text">$MBAT</span> Economy</h2>
+                <p class="section-subtitle">Fair launch. Community focused. No private sale.</p>
+            </div>
+
+            <div class="tokenomics-grid">
+                <div class="tokenomics-item">
+                    <span class="value">🔓</span>
+                    <span class="desc">Fair Launch</span>
+                </div>
+                <div class="tokenomics-item">
+                    <span class="value">👥</span>
+                    <span class="desc">Community Focused</span>
+                </div>
+                <div class="tokenomics-item">
+                    <span class="value">🚫</span>
+                    <span class="desc">No Private Sale</span>
+                </div>
+                <div class="tokenomics-item">
+                    <span class="value">🛡️</span>
+                    <span class="desc">Transparent Team &amp; Treasury</span>
+                </div>
+                <div class="tokenomics-item">
+                    <span class="value">📈</span>
+                    <span class="desc">Sustainable Marketing</span>
+                </div>
+                <div class="tokenomics-item">
+                    <span class="value">🌱</span>
+                    <span class="desc">Growth &amp; Development</span>
+                </div>
+            </div>
+
+            <p class="tokenomics-note">📊 Detailed figures coming soon — stay tuned.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTRACT & CHART ===== -->
+    <section id="chart" class="fade-section" aria-label="Contract address and live chart">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Contract &amp; Chart</span>
+                <h2 class="section-title">Track the <span class="gold-text">$MBAT</span> Flight</h2>
+                <p class="section-subtitle">Real-time data — coming soon.</p>
+            </div>
+
+            <div style="display:flex;flex-direction:column;align-items:center;gap:24px;">
+                <div class="contract-box">
+                    <span class="badge">📜 Contract</span>
+                    <span class="address">0x... Coming Soon</span>
+                    <span style="color:rgba(247,244,237,0.3);font-size:clamp(0.7rem,1vw,0.8rem);">⏳</span>
+                </div>
+
+                <div style="width:100%;max-width:820px;">
+                    <div class="chart-placeholder">
+                        <span class="big-icon" aria-hidden="true">📈</span>
+                        <p style="display:flex;align-items:center;gap:8px;font-size:clamp(0.9rem,1vw,1rem);color:rgba(247,244,237,0.6);">
+                            <span class="pulse-dot" aria-hidden="true"></span> Live chart widget loading...
+                        </p>
+                        <p style="font-size:clamp(0.7rem,0.9vw,0.8rem);margin-top:4px;color:rgba(247,244,237,0.25);">
+                            Powered by DexScreener · Coming Soon
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MEME GENERATOR ===== -->
+    <section id="meme-generator" class="fade-section" style="background:rgba(11,11,13,0.4);" aria-label="AI Meme Generator">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Meme Lab</span>
+                <h2 class="section-title">Generate Your <span class="gold-text">Meme</span></h2>
+                <p class="section-subtitle">
+                    Write a prompt to generate a meme — optionally upload an image first to use as a template for the AI to build from.
+                </p>
+            </div>
+
+            <div class="memegen-wrap">
+                <div class="memegen-col">
+                    <div class="memegen-card">
+                        <div class="memegen-card-head">
+                            <span class="memegen-card-icon">📁</span>
+                            <span class="memegen-card-title">Template (optional)</span>
+                        </div>
+                        <label class="memegen-upload-btn" for="memegenUpload" id="memegenUploadLabel">
+                            <span id="memegenUploadText">Choose a file to use as a base</span>
+                        </label>
+                        <input type="file" id="memegenUpload" accept="image/*" style="display:none;" />
+                        <div class="memegen-thumb-row" id="memegenThumbRow" style="display:none;">
+                            <img id="memegenThumb" class="memegen-thumb" alt="Uploaded template preview" />
+                            <button type="button" id="memegenClearUpload" class="memegen-clear-btn">✕ Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="memegen-card" style="margin-top:16px;">
+                        <div class="memegen-card-head">
+                            <span class="memegen-card-icon">✍️</span>
+                            <span class="memegen-card-title">Prompt (required)</span>
+                        </div>
+                        <textarea id="memegenPrompt" class="memegen-textarea" placeholder="e.g. Mexican Batman standing on a taco stand at sunset, cinematic, epic"></textarea>
+                        <button id="memegenGenerateBtn" class="btn-primary" style="width:100%;max-width:none;margin-top:14px;">🦇 Generate</button>
+                    </div>
+
+                    <p class="memegen-status" id="memegenStatus"></p>
+                </div>
+
+                <div class="memegen-col">
+                    <div class="memegen-card memegen-result-card">
+                        <div class="memegen-card-head">
+                            <span class="memegen-card-icon">🖼️</span>
+                            <span class="memegen-card-title">Result</span>
+                        </div>
+                        <div class="memegen-canvas-frame" id="memegenFrame">
+                            <span class="memegen-placeholder-text">Your meme will appear here</span>
+                            <img id="memegenImage" alt="Generated meme" style="display:none;" />
+                        </div>
+                        <a id="memegenDownloadBtn" class="btn-secondary memegen-download" style="width:100%;max-width:none;display:none;margin-top:14px;" download="mbat-meme.png">⬇️ Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOCIAL MEDIA ===== -->
+    <section id="socials" class="fade-section" style="background:rgba(11,11,13,0.4);" aria-label="Social media">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Join the <span class="gold-text">Bat Signal</span></h2>
+                <p class="section-subtitle">The streets are watching. The community decides how far this goes.</p>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://t.me/Mexicanba1man" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Join our Telegram">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="#D4AF37"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    Telegram
+                </a>
+                <a href="https://x.com/mexicanba1man" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow us on X">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="#D4AF37"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    X (Twitter)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OUR PROMISE ===== -->
+    <section id="promise" class="fade-section" aria-label="Our Promise">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Our Promise</span>
+                <h2 class="section-title">More Than a <span class="gold-text">Meme</span></h2>
+                <p class="section-subtitle">A movement built on trust, transparency, and community.</p>
+            </div>
+
+            <div class="promise-card">
+                <p>
+                    <strong>$MBAT</strong> is more than a meme—it's a movement. Together we'll defend the trenches, outlast the noise, and build a community worth remembering.
+                </p>
+                <div class="signature">
+                    One peso at a time. 🦇
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="fade-section" style="background:rgba(11,11,13,0.4);" aria-label="Frequently asked questions">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Frequently Asked <span class="gold-text">Questions</span></h2>
+                <p class="section-subtitle">Everything you need to know about $MBAT.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="q">What is $MBAT?</div>
+                    <div class="a">$MBAT is a community-driven meme token inspired by the viral “Mexican Batman” phenomenon — a movement against rug pulls and scams.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">How can I buy $MBAT?</div>
+                    <div class="a">The contract address and buy link will be announced soon. Stay tuned to our Telegram and X for the latest updates.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">Is there a private sale?</div>
+                    <div class="a">No. $MBAT is a fair launch with no private sale — community first, always.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">What makes $MBAT different?</div>
+                    <div class="a">Pure meme energy, a stacked community, and a commitment to transparency — no fake promises, just legendary vibes.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">When is the NFT collection?</div>
+                    <div class="a">The $MBAT NFT collection is in development. More details will be shared via our community channels.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">How can I contribute?</div>
+                    <div class="a">Join our Telegram, create memes, spread the word, and help us build the Batverse together.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHITEPAPER MODAL - CONTENT ONLY, NO FOOTER ===== -->
+    <div class="modal-overlay" id="whitepaperModal" role="dialog" aria-modal="true" aria-labelledby="wpModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" id="closeWhitepaperBtn" aria-label="Close whitepaper">✕</button>
+
+            <div class="wp-title" id="wpModalTitle">$MBAT Whitepaper</div>
+            <div class="wp-subtitle">Protector of the Trenches</div>
+
+            <div class="wp-section">
+                <h3>📋 Overview</h3>
+                <p>
+                    <strong>$MBAT</strong> is a community-driven meme token inspired by the viral “Mexican Batman” phenomenon. Armed with a luchador mask, a poncho, and an unstoppable commitment to the community, <strong>MBAT</strong> stands against rug pulls, scams, and fear in the trenches.
+                </p>
+                <p style="margin-top:10px;">
+                    We're not here to promise the moon—we're here to build a legendary community.
+                </p>
+            </div>
+
+            <div class="wp-section">
+                <h3>🎯 Mission</h3>
+                <p>
+                    Build a strong, transparent community where holders support one another, create unforgettable memes, and grow the <strong>$MBAT</strong> brand together.
+                </p>
+            </div>
+
+            <div class="wp-section">
+                <h3>🦇 Core Values</h3>
+                <ul>
+                    <li>🦇 Community First</li>
+                    <li>🛡️ Protect the Trenches</li>
+                    <li>😂 Meme Culture</li>
+                    <li>🤝 Transparency</li>
+                    <li>🚀 Long-Term Growth</li>
+                </ul>
+            </div>
+
+            <div class="wp-section">
+                <h3>📊 Tokenomics</h3>
+                <p><em>Figures Coming Soon</em></p>
+                <ul>
+                    <li>🔓 Fair Launch</li>
+                    <li>👥 Community Focused</li>
+                    <li>🚫 No Private Sale</li>
+                    <li>🛡️ Transparent Team &amp; Treasury</li>
+                    <li>📈 Sustainable Marketing &amp; Growth</li>
+                </ul>
+            </div>
+
+            <div class="wp-section">
+                <h3>🗺️ Roadmap</h3>
+                <ul>
+                    <li><strong>Phase 1:</strong> Launch, website, socials, community building.</li>
+                    <li><strong>Phase 2:</strong> Marketing, meme contests, partnerships, exchange listings.</li>
+                    <li><strong>Phase 3:</strong> Community governance, merchandise, ecosystem expansion.</li>
+                </ul>
+            </div>
+
+            <div class="wp-section">
+                <h3>💎 Our Promise</h3>
+                <div class="promise-box">
+                    <strong>$MBAT</strong> is more than a meme—it's a movement. Together we'll defend the trenches, outlast the noise, and build a community worth remembering.<br /><br />
+                    One peso at a time. 🦇
+                </div>
+            </div>
+            <!-- END OF WHITEPAPER CONTENT – NO FOOTER HERE -->
+        </div>
+    </div>
+
+    <!-- ===== FOOTER – MAIN PAGE ONLY ===== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span>$MBAT</span>
+                    </div>
+                    <p>
+                        Protector of the Trenches.<br />
+                        One peso at a time. 🦇
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Token</h5>
+                    <a href="#about">About</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="#tokenomics">Tokenomics</a>
+                    <a href="#chart">Chart</a>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Community</h5>
+                    <a href="https://t.me/Mexicanba1man" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    <a href="https://x.com/mexicanba1man" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <a href="#meme-generator">Meme Lab</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#promise">Our Promise</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 $MBAT · Mexican Batman Token. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://t.me/Mexicanba1man" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+                    <a href="https://x.com/mexicanba1man" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== PARTICLES =====
+        (function particles() {
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas.getContext('2d');
+            let w, h;
+            const particles = [];
+            const COUNT = 60;
+
+            function resize() {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+                reset() {
+                    this.x = Math.random() * w;
+                    this.y = Math.random() * h;
+                    this.size = Math.random() * 2.5 + 1;
+                    this.speedX = (Math.random() - 0.5) * 0.4;
+                    this.speedY = (Math.random() - 0.5) * 0.4;
+                    this.opacity = Math.random() * 0.3 + 0.05;
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    if (this.x < 0 || this.x > w) this.speedX *= -1;
+                    if (this.y < 0 || this.y > h) this.speedY *= -1;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(212, 175, 55, ' + this.opacity + ')';
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < COUNT; i++) {
+                particles.push(new Particle());
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, w, h);
+                for (const p of particles) {
+                    p.update();
+                    p.draw();
+                }
+                requestAnimationFrame(animateParticles);
+            }
+            animateParticles();
+        })();
+
+        // ===== HEADER SCROLL =====
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
+
+        // ===== HAMBURGER =====
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', function() {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ===== FADE SECTIONS =====
+        const fadeSections = document.querySelectorAll('.fade-section');
+        const fadeObserver = new IntersectionObserver(function(entries) {
+            for (const entry of entries) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            }
+        }, { threshold: 0.1 });
+        fadeSections.forEach(function(s) { fadeObserver.observe(s); });
+
+        // ===== SMOOTH NAV SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ===== WHITEPAPER MODAL =====
+        const modal = document.getElementById('whitepaperModal');
+        const openBtn = document.getElementById('openWhitepaperBtn');
+        const closeBtn = document.getElementById('closeWhitepaperBtn');
+
+        function openModal() {
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        openBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('open')) {
+                closeModal();
+            }
+        });
+
+        // ===== MEME GENERATOR (Pollinations.ai) =====
+        (function memeGenerator() {
+            const uploadInput = document.getElementById('memegenUpload');
+            const uploadText = document.getElementById('memegenUploadText');
+            const thumbRow = document.getElementById('memegenThumbRow');
+            const thumbImg = document.getElementById('memegenThumb');
+            const clearUploadBtn = document.getElementById('memegenClearUpload');
+            const promptBox = document.getElementById('memegenPrompt');
+            const generateBtn = document.getElementById('memegenGenerateBtn');
+            const statusEl = document.getElementById('memegenStatus');
+            const frame = document.getElementById('memegenFrame');
+            const placeholderText = frame.querySelector('.memegen-placeholder-text');
+            const resultImg = document.getElementById('memegenImage');
+            const downloadBtn = document.getElementById('memegenDownloadBtn');
+
+            let templateFile = null;
+
+            function setStatus(msg, isError) {
+                statusEl.textContent = msg;
+                statusEl.classList.toggle('error', !!isError);
+            }
+
+            function showResult(url, downloadName) {
+                resultImg.src = url;
+                resultImg.style.display = 'block';
+                placeholderText.style.display = 'none';
+                downloadBtn.style.display = 'inline-flex';
+                downloadBtn.href = url;
+                downloadBtn.setAttribute('download', downloadName || 'mbat-meme.png');
+            }
+
+            function clearTemplate() {
+                templateFile = null;
+                uploadInput.value = '';
+                uploadText.textContent = 'Choose a file to use as a base';
+                thumbRow.style.display = 'none';
+                thumbImg.src = '';
+            }
+
+            uploadInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                templateFile = file;
+                uploadText.textContent = file.name;
+                thumbImg.src = URL.createObjectURL(file);
+                thumbRow.style.display = 'flex';
+                setStatus('Template added. Write a prompt and hit Generate.', false);
+            });
+
+            clearUploadBtn.addEventListener('click', function() {
+                clearTemplate();
+                setStatus('', false);
+            });
+
+            // Uploads the template to a public host so Pollinations' image-to-image
+            // model can fetch it. Falls back to prompt-only generation if this fails.
+            async function uploadTemplate(file) {
+                const formData = new FormData();
+                formData.append('reqtype', 'fileupload');
+                formData.append('fileToUpload', file);
+                const res = await fetch('https://catbox.moe/user/api.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                if (!res.ok) throw new Error('Template upload failed');
+                const url = (await res.text()).trim();
+                if (!url.startsWith('http')) throw new Error('Template upload failed');
+                return url;
+            }
+
+            generateBtn.addEventListener('click', async function() {
+                const prompt = promptBox.value.trim();
+                if (!prompt) {
+                    setStatus('A prompt is required — describe your meme first.', true);
+                    return;
+                }
+
+                generateBtn.disabled = true;
+                placeholderText.style.display = 'none';
+                resultImg.style.display = 'none';
+
+                let templateUrl = null;
+                if (templateFile) {
+                    setStatus('Uploading your template...', false);
+                    try {
+                        templateUrl = await uploadTemplate(templateFile);
+                    } catch (err) {
+                        setStatus('Template upload failed — generating from prompt only.', true);
+                        templateUrl = null;
+                    }
+                }
+
+                setStatus(templateUrl ? 'Generating from your template...' : 'Generating your meme...', false);
+
+                const seed = Math.floor(Math.random() * 1000000);
+                const params = new URLSearchParams({
+                    width: 768,
+                    height: 768,
+                    nologo: 'true',
+                    seed: seed
+                });
+                if (templateUrl) {
+                    params.set('model', 'kontext');
+                    params.set('image', templateUrl);
+                }
+                const url = 'https://image.pollinations.ai/prompt/' + encodeURIComponent(prompt) + '?' + params.toString();
+
+                try {
+                    const res = await fetch(url);
+                    if (!res.ok) throw new Error('Request failed');
+                    const blob = await res.blob();
+                    const objectUrl = URL.createObjectURL(blob);
+                    showResult(objectUrl, 'mbat-meme.png');
+                    setStatus('Meme ready ↑ — download it below.', false);
+                } catch (err) {
+                    resultImg.onload = function() {
+                        showResult(url, 'mbat-meme.png');
+                        setStatus('Meme ready ↑ — download it below.', false);
+                    };
+                    resultImg.onerror = function() {
+                        setStatus('Generation failed — try a different prompt.', true);
+                        placeholderText.style.display = 'block';
+                    };
+                    resultImg.src = url;
+                } finally {
+                    generateBtn.disabled = false;
+                }
+            });
+        })();
+
+        console.log('🦇 $MBAT — Protector of the Trenches');
+    </script>
+
+</body>
+</html>
