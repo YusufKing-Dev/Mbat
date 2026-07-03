@@ -822,6 +822,79 @@
             color: #F7F4ED;
         }
 
+        .memegen-mode-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 24px 0 8px;
+            flex-wrap: wrap;
+        }
+
+        .memegen-mode-btn {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: clamp(0.75rem, 1vw, 0.85rem);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 10px 22px;
+            border-radius: 30px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            background: transparent;
+            color: rgba(247, 244, 237, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .memegen-mode-btn:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            color: #F7F4ED;
+        }
+
+        .memegen-mode-btn.active {
+            background: linear-gradient(135deg, #D4AF37, #f5d77b);
+            border-color: transparent;
+            color: #0B0B0D;
+        }
+
+        .memegen-mini-label {
+            display: block;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: clamp(0.72rem, 1vw, 0.8rem);
+            color: rgba(247, 244, 237, 0.6);
+            margin-bottom: 6px;
+        }
+
+        .memegen-input {
+            width: 100%;
+            background: rgba(11, 11, 13, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 11px 14px;
+            color: #F7F4ED;
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(0.85rem, 1vw, 0.95rem);
+            font-weight: 300;
+            transition: border-color 0.3s ease;
+        }
+
+        .memegen-input:focus {
+            outline: none;
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .memegen-input::placeholder {
+            color: rgba(247, 244, 237, 0.3);
+        }
+
+        .memegen-hint {
+            font-size: clamp(0.7rem, 0.9vw, 0.78rem);
+            color: rgba(247, 244, 237, 0.4);
+            font-weight: 300;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
         .memegen-thumb-row {
             display: flex;
             align-items: center;
@@ -1882,34 +1955,59 @@
                 <span class="section-label">Meme Lab</span>
                 <h2 class="section-title">Generate Your <span class="gold-text">Meme</span></h2>
                 <p class="section-subtitle">
-                    Write a prompt to generate a meme — optionally upload an image first to use as a template for the AI to build from.
+                    Caption mode is free and unlimited. AI Remix generates a brand new image from your description.
                 </p>
+            </div>
+
+            <div class="memegen-mode-toggle">
+                <button type="button" class="memegen-mode-btn active" id="modeCaptionBtn">🖋️ Caption</button>
+                <button type="button" class="memegen-mode-btn" id="modeAIBtn">🦇 AI Remix</button>
             </div>
 
             <div class="memegen-wrap">
                 <div class="memegen-col">
-                    <div class="memegen-card">
-                        <div class="memegen-card-head">
-                            <span class="memegen-card-icon">📁</span>
-                            <span class="memegen-card-title">Template (optional)</span>
+
+                    <!-- ===== CAPTION MODE FIELDS ===== -->
+                    <div id="captionFields">
+                        <div class="memegen-card">
+                            <div class="memegen-card-head">
+                                <span class="memegen-card-icon">📁</span>
+                                <span class="memegen-card-title">Base Image (required)</span>
+                            </div>
+                            <label class="memegen-upload-btn" for="captionUpload" id="captionUploadLabel">
+                                <span id="captionUploadText">Choose a file from your device</span>
+                            </label>
+                            <input type="file" id="captionUpload" accept="image/*" style="display:none;" />
+                            <div class="memegen-thumb-row" id="captionThumbRow" style="display:none;">
+                                <img id="captionThumb" class="memegen-thumb" alt="Uploaded base preview" />
+                                <button type="button" id="captionClearUpload" class="memegen-clear-btn">✕ Remove</button>
+                            </div>
                         </div>
-                        <label class="memegen-upload-btn" for="memegenUpload" id="memegenUploadLabel">
-                            <span id="memegenUploadText">Choose a file to use as a base</span>
-                        </label>
-                        <input type="file" id="memegenUpload" accept="image/*" style="display:none;" />
-                        <div class="memegen-thumb-row" id="memegenThumbRow" style="display:none;">
-                            <img id="memegenThumb" class="memegen-thumb" alt="Uploaded template preview" />
-                            <button type="button" id="memegenClearUpload" class="memegen-clear-btn">✕ Remove</button>
+
+                        <div class="memegen-card" style="margin-top:16px;">
+                            <div class="memegen-card-head">
+                                <span class="memegen-card-icon">🔠</span>
+                                <span class="memegen-card-title">Caption Text</span>
+                            </div>
+                            <label class="memegen-mini-label" for="captionTop">Top text</label>
+                            <input type="text" id="captionTop" class="memegen-input" placeholder="ONE DOES NOT SIMPLY" />
+                            <label class="memegen-mini-label" for="captionBottom" style="margin-top:12px;">Bottom text</label>
+                            <input type="text" id="captionBottom" class="memegen-input" placeholder="AVOID A RUG PULL" />
+                            <button id="captionGenerateBtn" class="btn-primary" style="width:100%;max-width:none;margin-top:16px;">🖋️ Render Caption</button>
                         </div>
                     </div>
 
-                    <div class="memegen-card" style="margin-top:16px;">
-                        <div class="memegen-card-head">
-                            <span class="memegen-card-icon">✍️</span>
-                            <span class="memegen-card-title">Prompt (required)</span>
+                    <!-- ===== AI REMIX MODE FIELDS ===== -->
+                    <div id="aiFields" style="display:none;">
+                        <div class="memegen-card">
+                            <div class="memegen-card-head">
+                                <span class="memegen-card-icon">✍️</span>
+                                <span class="memegen-card-title">Prompt (required)</span>
+                            </div>
+                            <textarea id="memegenPrompt" class="memegen-textarea" placeholder="e.g. Mexican Batman standing on a taco stand at sunset, cinematic, epic"></textarea>
+                            <p class="memegen-hint">Generates a brand new AI image from your description — free, no signup, no template.</p>
+                            <button id="memegenGenerateBtn" class="btn-primary" style="width:100%;max-width:none;margin-top:14px;">🦇 Generate</button>
                         </div>
-                        <textarea id="memegenPrompt" class="memegen-textarea" placeholder="e.g. Mexican Batman standing on a taco stand at sunset, cinematic, epic"></textarea>
-                        <button id="memegenGenerateBtn" class="btn-primary" style="width:100%;max-width:none;margin-top:14px;">🦇 Generate</button>
                     </div>
 
                     <p class="memegen-status" id="memegenStatus"></p>
@@ -2270,22 +2368,18 @@
             }
         });
 
-        // ===== MEME GENERATOR (Pollinations.ai) =====
+        // ===== MEME GENERATOR (Caption mode + AI Remix mode) =====
         (function memeGenerator() {
-            const uploadInput = document.getElementById('memegenUpload');
-            const uploadText = document.getElementById('memegenUploadText');
-            const thumbRow = document.getElementById('memegenThumbRow');
-            const thumbImg = document.getElementById('memegenThumb');
-            const clearUploadBtn = document.getElementById('memegenClearUpload');
-            const promptBox = document.getElementById('memegenPrompt');
-            const generateBtn = document.getElementById('memegenGenerateBtn');
+            const modeCaptionBtn = document.getElementById('modeCaptionBtn');
+            const modeAIBtn = document.getElementById('modeAIBtn');
+            const captionFields = document.getElementById('captionFields');
+            const aiFields = document.getElementById('aiFields');
+
             const statusEl = document.getElementById('memegenStatus');
             const frame = document.getElementById('memegenFrame');
             const placeholderText = frame.querySelector('.memegen-placeholder-text');
             const resultImg = document.getElementById('memegenImage');
             const downloadBtn = document.getElementById('memegenDownloadBtn');
-
-            let templateFile = null;
 
             function setStatus(msg, isError) {
                 statusEl.textContent = msg;
@@ -2301,44 +2395,126 @@
                 downloadBtn.setAttribute('download', downloadName || 'mbat-meme.png');
             }
 
-            function clearTemplate() {
-                templateFile = null;
-                uploadInput.value = '';
-                uploadText.textContent = 'Choose a file to use as a base';
-                thumbRow.style.display = 'none';
-                thumbImg.src = '';
-            }
-
-            uploadInput.addEventListener('change', function(e) {
-                const file = e.target.files[0];
-                if (!file) return;
-                templateFile = file;
-                uploadText.textContent = file.name;
-                thumbImg.src = URL.createObjectURL(file);
-                thumbRow.style.display = 'flex';
-                setStatus('Template added. Write a prompt and hit Generate.', false);
+            // ----- MODE TOGGLE -----
+            modeCaptionBtn.addEventListener('click', function() {
+                modeCaptionBtn.classList.add('active');
+                modeAIBtn.classList.remove('active');
+                captionFields.style.display = 'block';
+                aiFields.style.display = 'none';
+                setStatus('', false);
             });
-
-            clearUploadBtn.addEventListener('click', function() {
-                clearTemplate();
+            modeAIBtn.addEventListener('click', function() {
+                modeAIBtn.classList.add('active');
+                modeCaptionBtn.classList.remove('active');
+                aiFields.style.display = 'block';
+                captionFields.style.display = 'none';
                 setStatus('', false);
             });
 
-            // Uploads the template to a public host so Pollinations' image-to-image
-            // model can fetch it. Falls back to prompt-only generation if this fails.
-            async function uploadTemplate(file) {
-                const formData = new FormData();
-                formData.append('reqtype', 'fileupload');
-                formData.append('fileToUpload', file);
-                const res = await fetch('https://catbox.moe/user/api.php', {
-                    method: 'POST',
-                    body: formData
-                });
-                if (!res.ok) throw new Error('Template upload failed');
-                const url = (await res.text()).trim();
-                if (!url.startsWith('http')) throw new Error('Template upload failed');
-                return url;
+            // ===== CAPTION MODE (free, unlimited, canvas-based) =====
+            const captionUploadInput = document.getElementById('captionUpload');
+            const captionUploadText = document.getElementById('captionUploadText');
+            const captionThumbRow = document.getElementById('captionThumbRow');
+            const captionThumb = document.getElementById('captionThumb');
+            const captionClearBtn = document.getElementById('captionClearUpload');
+            const captionTop = document.getElementById('captionTop');
+            const captionBottom = document.getElementById('captionBottom');
+            const captionGenerateBtn = document.getElementById('captionGenerateBtn');
+
+            let captionImage = null;
+
+            captionUploadInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                captionUploadText.textContent = file.name;
+                const objectUrl = URL.createObjectURL(file);
+                captionThumb.src = objectUrl;
+                captionThumbRow.style.display = 'flex';
+                const img = new Image();
+                img.onload = function() { captionImage = img; };
+                img.src = objectUrl;
+            });
+
+            captionClearBtn.addEventListener('click', function() {
+                captionImage = null;
+                captionUploadInput.value = '';
+                captionUploadText.textContent = 'Choose a file from your device';
+                captionThumbRow.style.display = 'none';
+                captionThumb.src = '';
+            });
+
+            function wrapLines(ctx, text, maxWidth) {
+                const words = text.toUpperCase().split(' ');
+                let lines = [], line = '';
+                for (const w of words) {
+                    const test = line + w + ' ';
+                    if (ctx.measureText(test).width > maxWidth && line !== '') {
+                        lines.push(line.trim());
+                        line = w + ' ';
+                    } else {
+                        line = test;
+                    }
+                }
+                if (line.trim()) lines.push(line.trim());
+                return lines;
             }
+
+            captionGenerateBtn.addEventListener('click', function() {
+                if (!captionImage) {
+                    setStatus('Upload a base image first.', true);
+                    return;
+                }
+                const topText = captionTop.value.trim();
+                const bottomText = captionBottom.value.trim();
+                if (!topText && !bottomText) {
+                    setStatus('Add top or bottom text.', true);
+                    return;
+                }
+
+                const canvas = document.createElement('canvas');
+                const maxW = 800;
+                const scale = captionImage.naturalWidth > maxW ? maxW / captionImage.naturalWidth : 1;
+                canvas.width = captionImage.naturalWidth * scale;
+                canvas.height = captionImage.naturalHeight * scale;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(captionImage, 0, 0, canvas.width, canvas.height);
+
+                const fontSize = Math.max(28, Math.floor(canvas.width / 12));
+                ctx.textAlign = 'center';
+                ctx.font = `900 ${fontSize}px Impact, 'Archivo Black', sans-serif`;
+                ctx.fillStyle = '#fff';
+                ctx.strokeStyle = '#000';
+                ctx.lineWidth = fontSize / 12;
+                ctx.lineJoin = 'round';
+
+                const lineHeight = fontSize * 1.1;
+
+                if (topText) {
+                    const lines = wrapLines(ctx, topText, canvas.width - 40);
+                    lines.forEach((l, i) => {
+                        const y = fontSize + 10 + i * lineHeight;
+                        ctx.strokeText(l, canvas.width / 2, y);
+                        ctx.fillText(l, canvas.width / 2, y);
+                    });
+                }
+
+                if (bottomText) {
+                    const lines = wrapLines(ctx, bottomText, canvas.width - 40);
+                    const startY = canvas.height - 20 - (lines.length - 1) * lineHeight;
+                    lines.forEach((l, i) => {
+                        const y = startY + i * lineHeight;
+                        ctx.strokeText(l, canvas.width / 2, y);
+                        ctx.fillText(l, canvas.width / 2, y);
+                    });
+                }
+
+                showResult(canvas.toDataURL('image/png'), 'mbat-meme.png');
+                setStatus('Meme ready ↑ — download it below.', false);
+            });
+
+            // ===== AI REMIX MODE (Pollinations.ai — free anonymous tier) =====
+            const promptBox = document.getElementById('memegenPrompt');
+            const generateBtn = document.getElementById('memegenGenerateBtn');
 
             generateBtn.addEventListener('click', async function() {
                 const prompt = promptBox.value.trim();
@@ -2350,19 +2526,7 @@
                 generateBtn.disabled = true;
                 placeholderText.style.display = 'none';
                 resultImg.style.display = 'none';
-
-                let templateUrl = null;
-                if (templateFile) {
-                    setStatus('Uploading your template...', false);
-                    try {
-                        templateUrl = await uploadTemplate(templateFile);
-                    } catch (err) {
-                        setStatus('Template upload failed — generating from prompt only.', true);
-                        templateUrl = null;
-                    }
-                }
-
-                setStatus(templateUrl ? 'Generating from your template...' : 'Generating your meme...', false);
+                setStatus('Generating your meme...', false);
 
                 const seed = Math.floor(Math.random() * 1000000);
                 const params = new URLSearchParams({
@@ -2371,10 +2535,6 @@
                     nologo: 'true',
                     seed: seed
                 });
-                if (templateUrl) {
-                    params.set('model', 'kontext');
-                    params.set('image', templateUrl);
-                }
                 const url = 'https://image.pollinations.ai/prompt/' + encodeURIComponent(prompt) + '?' + params.toString();
 
                 try {
